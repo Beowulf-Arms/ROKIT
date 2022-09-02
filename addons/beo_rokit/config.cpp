@@ -5,44 +5,44 @@
 
 #define _ARMA_
 
-//Class bso_arty : config.bin{
+//Class beo_arty : config.bin{
 class CfgPatches
 {
-	class bso_rokit
+	class beo_rokit
 	{
 		units[] = {
-			"bso_arty_rokit",
-			"bso_arty_rokit_opf",
-			"bso_arty_rokit_ind",
-			"bso_arty_rokit_he",
-			"bso_arty_rokit_he_opf",
-			"bso_arty_rokit_he_ind",
-			"bso_arty_rokit_cluster",
-			"bso_arty_rokit_cluster_opf",
-			"bso_arty_rokit_cluster_ind",
-			"bso_arty_hilux_arty",
-			"bso_arty_hilux_arty_opf",
-			"bso_arty_hilux_arty_ind",
-			"bso_arty_hilux_arty_he",
-			"bso_arty_hilux_arty_he_opf",
-			"bso_arty_hilux_arty_he_ind",
-			"bso_arty_hilux_arty_cluster",
-			"bso_arty_hilux_arty_cluster_opf",
-			"bso_arty_hilux_arty_cluster_ind"
+			"beo_arty_rokit",
+			"beo_arty_rokit_opf",
+			"beo_arty_rokit_ind",
+			"beo_arty_rokit_he",
+			"beo_arty_rokit_he_opf",
+			"beo_arty_rokit_he_ind",
+			"beo_arty_rokit_cluster",
+			"beo_arty_rokit_cluster_opf",
+			"beo_arty_rokit_cluster_ind",
+			"beo_arty_hilux_arty",
+			"beo_arty_hilux_arty_opf",
+			"beo_arty_hilux_arty_ind",
+			"beo_arty_hilux_arty_he",
+			"beo_arty_hilux_arty_he_opf",
+			"beo_arty_hilux_arty_he_ind",
+			"beo_arty_hilux_arty_cluster",
+			"beo_arty_hilux_arty_cluster_opf",
+			"beo_arty_hilux_arty_cluster_ind"
 			
 			
 			};
 		weapons[] = {};
-		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Mark","A3_Weapons_F_Exp","bso_wps","bso_ai"};
+		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Mark","A3_Weapons_F_Exp","beo_wps","beo_ai"};
 		version = "1.0";
 		requiredVersion = "1.0";
-		author = "BSO Walker";
+		author = "Walker";
 	};
 };
 
 
 
-class bso_artyRocket_black
+class beo_artyRocket_black
 {
 	class Light1
 	{
@@ -53,10 +53,10 @@ class bso_artyRocket_black
 		simulation = "light";
 		type = "RocketLight";
 	};
-	class bso_artyRocket_black
+	class beo_artyRocket_black
 	{
 		simulation = "particles";
-		type = "bso_artyRocket_black";
+		type = "beo_artyRocket_black";
 		position[] = {0, 0, 0};
 		intensity = 1;
 		interval = 1;
@@ -66,7 +66,7 @@ class bso_artyRocket_black
 class cfgCloudlets
 {
 	class Missile5;
-	class bso_artyRocket_black: Missile5
+	class beo_artyRocket_black: Missile5
 	{
 		color[] = {{0.01,0.01,0.01,0.8},{0.05,0.05,0.05,0.4},{0.1,0.1,0.1,0}};
 		colorVar[] = {0, 0, 0, 0};
@@ -90,57 +90,57 @@ class CfgVehicles
 	};
 	
 // Rocket Arty
-	class bso_arty_rokit: B_Mortar_01_F
+	class beo_arty_rokit: B_Mortar_01_F
 	{
 		scope = 2;		
-		displayname = "[BSO AI] ROKIT Artillery";
+		displayname = "[BEO AI] ROKIT Artillery";
 		editorSubcategory = "rhs_EdSubcat_artillery";
 		vehicleClass = "rhs_vehclass_artillery";
-		author = "BSO Walker";
+		author = "Walker";
 		side = 1;
-		faction = "bso_ai_blu";
-		crew = "bso_ai_crew";
-		typicalCargo[] = {"bso_ai_crew"};
+		faction = "beo_ai_blu";
+		crew = "beo_ai_crew";
+		typicalCargo[] = {"beo_ai_crew"};
 		class Turrets: Turrets 
 		{		
 			class MainTurret: MainTurret
 			{
-				magazines[] = {"bso_arty_mag12_122_he","bso_arty_mag12_122_he","bso_arty_mag12_122_he","bso_arty_mag12_122_he","bso_arty_mag12_122_cluster","bso_arty_mag12_122_cluster"};
-				weapons[] = {"bso_arty_rokit"};
+				magazines[] = {"beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster"};
+				weapons[] = {"beo_arty_rokit"};
 			};
 		};	
 	};	
 	
-	class bso_arty_rokit_opf: bso_arty_rokit
+	class beo_arty_rokit_opf: beo_arty_rokit
 	{
 		scope = 2;
 		side = 0;
-		faction = "bso_ai_opf";
-		crew = "bso_ai_crew_opf";
-		typicalCargo[] = {"bso_ai_crew_opf"};
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+		typicalCargo[] = {"beo_ai_crew_opf"};
 	};
 	
-	class bso_arty_rokit_ind: bso_arty_rokit
+	class beo_arty_rokit_ind: beo_arty_rokit
 	{
 		scope = 2;
 		side = 2;
-		faction = "bso_ai_ind";
-		crew = "bso_ai_crew_ind";
-		typicalCargo[] = {"bso_ai_crew_ind"};
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+		typicalCargo[] = {"beo_ai_crew_ind"};
 	};
 
 
-	class bso_arty_rokit_test: bso_arty_rokit
+	class beo_arty_rokit_test: beo_arty_rokit
 	{
-		displayname = "[BSO AI] ROKIT Artillery TEST";
-		model = "\bso_rokit\data\quassimLaunchertri.p3d";
+		displayname = "[BEO AI] ROKIT Artillery TEST";
+		model = "\beo_rokit\data\quassimLaunchertri.p3d";
 		
 		class Turrets: Turrets 
 		{		
 			class MainTurret: MainTurret
 			{
-				magazines[] = {"bso_arty_mag12_122_TEST","bso_arty_mag12_122_TEST","bso_arty_mag12_122_TEST","bso_arty_mag12_122_TEST","bso_arty_mag12_122_TEST","bso_arty_mag12_122_TEST"};
-				weapons[] = {"bso_arty_rokit"};
+				magazines[] = {"beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST"};
+				weapons[] = {"beo_arty_rokit"};
 			};
 		};	
 	};
@@ -151,69 +151,69 @@ class CfgVehicles
 
 
 
-	class bso_arty_rokit_he: bso_arty_rokit
+	class beo_arty_rokit_he: beo_arty_rokit
 	{
 		scope = 2;		
-		displayname = "[BSO AI] ROKIT Artillery (HE)";
+		displayname = "[BEO AI] ROKIT Artillery (HE)";
 		class Turrets: Turrets 
 		{		
 			class MainTurret: MainTurret
 			{
-				magazines[] = {"bso_arty_mag12_122_he","bso_arty_mag12_122_he","bso_arty_mag12_122_he","bso_arty_mag12_122_he","bso_arty_mag12_122_he","bso_arty_mag12_122_he"};
-				weapons[] = {"bso_arty_rokit"};
+				magazines[] = {"beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he"};
+				weapons[] = {"beo_arty_rokit"};
 			};
 		};	
 	};	
 	
-	class bso_arty_rokit_he_opf: bso_arty_rokit_he
+	class beo_arty_rokit_he_opf: beo_arty_rokit_he
 	{
 		scope = 2;
 		side = 0;
-		faction = "bso_ai_opf";
-		crew = "bso_ai_crew_opf";
-		typicalCargo[] = {"bso_ai_crew_opf"};
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+		typicalCargo[] = {"beo_ai_crew_opf"};
 	};
 	
-	class bso_arty_rokit_he_ind: bso_arty_rokit_he
+	class beo_arty_rokit_he_ind: beo_arty_rokit_he
 	{
 		scope = 2;
 		side = 2;
-		faction = "bso_ai_ind";
-		crew = "bso_ai_crew_ind";
-		typicalCargo[] = {"bso_ai_crew_ind"};
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+		typicalCargo[] = {"beo_ai_crew_ind"};
 	};
 
 
-	class bso_arty_rokit_cluster: bso_arty_rokit_he
+	class beo_arty_rokit_cluster: beo_arty_rokit_he
 	{
 		scope = 2;		
-		displayname = "[BSO AI] ROKIT Artillery (Cluster)";
+		displayname = "[BEO AI] ROKIT Artillery (Cluster)";
 		class Turrets: Turrets 
 		{		
 			class MainTurret: MainTurret
 			{
-				magazines[] = {"bso_arty_mag12_122_cluster","bso_arty_mag12_122_cluster","bso_arty_mag12_122_cluster","bso_arty_mag12_122_cluster","bso_arty_mag12_122_cluster","bso_arty_mag12_122_cluster"};
-				weapons[] = {"bso_arty_rokit"};
+				magazines[] = {"beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster"};
+				weapons[] = {"beo_arty_rokit"};
 			};
 		};	
 	};	
 	
-	class bso_arty_rokit_cluster_opf: bso_arty_rokit_cluster
+	class beo_arty_rokit_cluster_opf: beo_arty_rokit_cluster
 	{
 		scope = 2;
 		side = 0;
-		faction = "bso_ai_opf";
-		crew = "bso_ai_crew_opf";
-		typicalCargo[] = {"bso_ai_crew_opf"};
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+		typicalCargo[] = {"beo_ai_crew_opf"};
 	};
 	
-	class bso_arty_rokit_cluster_ind: bso_arty_rokit_cluster
+	class beo_arty_rokit_cluster_ind: beo_arty_rokit_cluster
 	{
 		scope = 2;
 		side = 2;
-		faction = "bso_ai_ind";
-		crew = "bso_ai_crew_ind";
-		typicalCargo[] = {"bso_ai_crew_ind"};
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+		typicalCargo[] = {"beo_ai_crew_ind"};
 	};
 
 
@@ -233,131 +233,131 @@ class CfgVehicles
 		class Turrets;
 		class MainTurret;			
 	};
-	class bso_arty_hilux_arty: UK3CB_TKM_I_Hilux_Rocket_Arty
+	class beo_arty_hilux_arty: UK3CB_TKM_I_Hilux_Rocket_Arty
 	{	
 		scope = 2;
 		side = 1;
 		vehicleClass = "rhs_vehclass_artillery";
 		editorSubcategory = "rhs_EdSubcat_artillery";
-		faction="bso_ai_blu";
-		crew = "bso_ai_crew";
-		typicalCargo[] = {"bso_ai_crew"};
-		displayName = "[BSO AI] Hilux ROKIT MLRS";
+		faction="beo_ai_blu";
+		crew = "beo_ai_crew";
+		typicalCargo[] = {"beo_ai_crew"};
+		displayName = "[BEO AI] Hilux ROKIT MLRS";
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
 			{
 				elevationMode= 3; //how to elevate
-				weapons[] = {"bso_arty_rokit_mlrs"};
-				magazines[] = {"bso_arty_mag10_122_he","bso_arty_mag10_122_he","bso_arty_mag10_122_he","bso_arty_mag10_122_he","bso_arty_mag10_122_he","bso_arty_mag10_122_he","bso_arty_mag10_122_cluster","bso_arty_mag10_122_cluster"};
+				weapons[] = {"beo_arty_rokit_mlrs"};
+				magazines[] = {"beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster"};
 			};
 		};	
 	};
 	
 	
-	class bso_arty_hilux_arty_opf: bso_arty_hilux_arty
+	class beo_arty_hilux_arty_opf: beo_arty_hilux_arty
 	{
 		scope = 2;
 		side = 0;
-		faction = "bso_ai_opf";
-		crew = "bso_ai_crew_opf";
-		typicalCargo[] = {"bso_ai_crew_opf"};
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+		typicalCargo[] = {"beo_ai_crew_opf"};
 	};
 	
-	class bso_arty_hilux_arty_ind: bso_arty_hilux_arty
+	class beo_arty_hilux_arty_ind: beo_arty_hilux_arty
 	{
 		scope = 2;
 		side = 2;
-		faction = "bso_ai_ind";
-		crew = "bso_ai_crew_ind";
-		typicalCargo[] = {"bso_ai_crew_ind"};
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+		typicalCargo[] = {"beo_ai_crew_ind"};
 	};
 
 
 
 
-	class bso_arty_hilux_arty_he: UK3CB_TKM_I_Hilux_Rocket_Arty
+	class beo_arty_hilux_arty_he: UK3CB_TKM_I_Hilux_Rocket_Arty
 	{	
 		scope = 2;
 		side = 1;
 		vehicleClass = "rhs_vehclass_artillery";
 		editorSubcategory = "rhs_EdSubcat_artillery";
-		faction="bso_ai_blu";
-		crew = "bso_ai_crew";
-		typicalCargo[] = {"bso_ai_crew"};
-		displayName = "[BSO AI] Hilux ROKIT MLRS (HE)";
+		faction="beo_ai_blu";
+		crew = "beo_ai_crew";
+		typicalCargo[] = {"beo_ai_crew"};
+		displayName = "[BEO AI] Hilux ROKIT MLRS (HE)";
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
 			{
 				elevationMode= 3; //how to elevate
-				weapons[] = {"bso_arty_rokit_mlrs"};
-				magazines[] = {"bso_arty_mag10_122_he","bso_arty_mag10_122_he","bso_arty_mag10_122_he","bso_arty_mag10_122_he","bso_arty_mag10_122_he","bso_arty_mag10_122_he","bso_arty_mag10_122_he","bso_arty_mag10_122_he"};
+				weapons[] = {"beo_arty_rokit_mlrs"};
+				magazines[] = {"beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he"};
 			};
 		};	
 	};
 	
 	
-	class bso_arty_hilux_arty_he_opf: bso_arty_hilux_arty_he
+	class beo_arty_hilux_arty_he_opf: beo_arty_hilux_arty_he
 	{
 		scope = 2;
 		side = 0;
-		faction = "bso_ai_opf";
-		crew = "bso_ai_crew_opf";
-		typicalCargo[] = {"bso_ai_crew_opf"};
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+		typicalCargo[] = {"beo_ai_crew_opf"};
 	};
 	
-	class bso_arty_hilux_arty_he_ind: bso_arty_hilux_arty_he
+	class beo_arty_hilux_arty_he_ind: beo_arty_hilux_arty_he
 	{
 		scope = 2;
 		side = 2;
-		faction = "bso_ai_ind";
-		crew = "bso_ai_crew_ind";
-		typicalCargo[] = {"bso_ai_crew_ind"};
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+		typicalCargo[] = {"beo_ai_crew_ind"};
 	};
 
 
 
 
 
-	class bso_arty_hilux_arty_cluster: UK3CB_TKM_I_Hilux_Rocket_Arty
+	class beo_arty_hilux_arty_cluster: UK3CB_TKM_I_Hilux_Rocket_Arty
 	{	
 		scope = 2;
 		side = 1;
 		vehicleClass = "rhs_vehclass_artillery";
 		editorSubcategory = "rhs_EdSubcat_artillery";
-		faction="bso_ai_blu";
-		crew = "bso_ai_crew";
-		typicalCargo[] = {"bso_ai_crew"};
-		displayName = "[BSO AI] Hilux ROKIT MLRS (Cluster)";
+		faction="beo_ai_blu";
+		crew = "beo_ai_crew";
+		typicalCargo[] = {"beo_ai_crew"};
+		displayName = "[BEO AI] Hilux ROKIT MLRS (Cluster)";
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
 			{
 				elevationMode= 3; //how to elevate
-				weapons[] = {"bso_arty_rokit_mlrs"};
-				magazines[] = {"bso_arty_mag10_122_cluster","bso_arty_mag10_122_cluster","bso_arty_mag10_122_cluster","bso_arty_mag10_122_cluster","bso_arty_mag10_122_cluster","bso_arty_mag10_122_cluster","bso_arty_mag10_122_cluster","bso_arty_mag10_122_cluster"};
+				weapons[] = {"beo_arty_rokit_mlrs"};
+				magazines[] = {"beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster"};
 			};
 		};	
 	};
 	
 	
-	class bso_arty_hilux_arty_cluster_opf: bso_arty_hilux_arty_cluster
+	class beo_arty_hilux_arty_cluster_opf: beo_arty_hilux_arty_cluster
 	{
 		scope = 2;
 		side = 0;
-		faction = "bso_ai_opf";
-		crew = "bso_ai_crew_opf";
-		typicalCargo[] = {"bso_ai_crew_opf"};
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+		typicalCargo[] = {"beo_ai_crew_opf"};
 	};
 	
-	class bso_arty_hilux_arty_cluster_ind: bso_arty_hilux_arty_cluster
+	class beo_arty_hilux_arty_cluster_ind: beo_arty_hilux_arty_cluster
 	{
 		scope = 2;
 		side = 2;
-		faction = "bso_ai_ind";
-		crew = "bso_ai_crew_ind";
-		typicalCargo[] = {"bso_ai_crew_ind"};
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+		typicalCargo[] = {"beo_ai_crew_ind"};
 	};
 	
 	
@@ -381,7 +381,7 @@ class CfgWeapons
 		class Full;
 	};
 	
-	class bso_arty_rokit: rockets_230mm_GAT
+	class beo_arty_rokit: rockets_230mm_GAT
 	{
 		class Close: Close
 		{
@@ -457,13 +457,13 @@ class CfgWeapons
 			"Far"
 		};
 		magazines[] = {
-			"bso_arty_mag12_122_TEST",
-			"bso_arty_mag12_122_he",
-			"bso_arty_mag12_122_cluster"
+			"beo_arty_mag12_122_TEST",
+			"beo_arty_mag12_122_he",
+			"beo_arty_mag12_122_cluster"
 		};
 	};
 	
-	class bso_arty_rokit_mlrs: bso_arty_rokit
+	class beo_arty_rokit_mlrs: beo_arty_rokit
 	{
 		magazineReloadTime = 60;
 		class Close: Close
@@ -543,8 +543,8 @@ class CfgWeapons
 			"Far"
 		};
 		magazines[] = {
-			"bso_arty_mag10_122_he",
-			"bso_arty_mag10_122_cluster"
+			"beo_arty_mag10_122_he",
+			"beo_arty_mag10_122_cluster"
 		};
 	};
 	
@@ -554,43 +554,43 @@ class cfgMagazines
 {
 
 	class 12Rnd_230mm_rockets;
-	class bso_arty_mag12_122_he: 12Rnd_230mm_rockets
+	class beo_arty_mag12_122_he: 12Rnd_230mm_rockets
 	{
 		scope = 2;
-		ammo = "bso_arty_ammo_122_r_he";
-		displayName = "[BSO AI] 12x 122mm HE Rocket";
+		ammo = "beo_arty_ammo_122_r_he";
+		displayName = "[BEO AI] 12x 122mm HE Rocket";
 		count = 12;
 		initSpeed = 400;//850
 	};	
 
-	class bso_arty_mag12_122_test: bso_arty_mag12_122_he
+	class beo_arty_mag12_122_test: beo_arty_mag12_122_he
 	{
 		scope = 2;
-		ammo = "bso_arty_ammo_122_r_test";
-		displayName = "[BSO AI] 12x 122mm TEST Rocket";
+		ammo = "beo_arty_ammo_122_r_test";
+		displayName = "[BEO AI] 12x 122mm TEST Rocket";
 	};
 	
-	class bso_arty_mag10_122_he: bso_arty_mag12_122_he
+	class beo_arty_mag10_122_he: beo_arty_mag12_122_he
 	{
 		scope = 2;
-		displayName = "[BSO AI] 10x 122mm HE Rocket";
+		displayName = "[BEO AI] 10x 122mm HE Rocket";
 		count = 10;		
 	};	
 
 	
-	class bso_arty_mag12_122_cluster: 12Rnd_230mm_rockets
+	class beo_arty_mag12_122_cluster: 12Rnd_230mm_rockets
 	{
 		scope = 2;
-		ammo = "bso_arty_ammo_122_r_cluster";
-		displayName = "[BSO AI] 12x 122mm Cluster Rocket";
+		ammo = "beo_arty_ammo_122_r_cluster";
+		displayName = "[BEO AI] 12x 122mm Cluster Rocket";
 		count = 12;
 		initSpeed = 400;//850
 	};	
 	
-	class bso_arty_mag10_122_cluster: bso_arty_mag12_122_cluster
+	class beo_arty_mag10_122_cluster: beo_arty_mag12_122_cluster
 	{
 		scope = 2;
-		displayName = "[BSO AI] 10x 122mm Cluster Rocket";
+		displayName = "[BEO AI] 10x 122mm Cluster Rocket";
 		count = 10;		
 	};	
 	
@@ -602,7 +602,7 @@ class cfgAmmo
 	class R_230mm_fly;
 
 // HE Rocket
-	class bso_arty_ammo_122_r_he: R_230mm_HE
+	class beo_arty_ammo_122_r_he: R_230mm_HE
 	{
 		cost = 10;
 		scope = 2;
@@ -613,17 +613,17 @@ class cfgAmmo
 		indirectHit = 5;
 		indirectHitRange = 15;	
 		explosive = 0.8;	//1 	
-		//submunitionAmmo = "bso_arty_ammo_122_r_fly";
+		//submunitionAmmo = "beo_arty_ammo_122_r_fly";
 		submunitionAmmo[] = {
-			"bso_arty_ammo_122_r_fly",0.8,
-			"bso_sub_dud_fly",0.2
+			"beo_arty_ammo_122_r_fly",0.8,
+			"beo_sub_dud_fly",0.2
 			
 			};
-		effectsMissile = "bso_artyRocket_black";
-		effectFly = "bso_artyRocket_black";
+		effectsMissile = "beo_artyRocket_black";
+		effectFly = "beo_artyRocket_black";
 		model = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
 	};
-	class bso_arty_ammo_122_r_fly: R_230mm_fly
+	class beo_arty_ammo_122_r_fly: R_230mm_fly
 	{	
 		cost = 10;
 		scope = 2;
@@ -631,37 +631,37 @@ class cfgAmmo
 		indirectHit = 5; //800
 		indirectHitRange = 15;	//30
 		dangerRadiusHit = 30;
-		effectsMissile = "bso_artyRocket_black";
-		effectFly = "bso_artyRocket_black";
+		effectsMissile = "beo_artyRocket_black";
+		effectFly = "beo_artyRocket_black";
 		model = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
 		
 	};
 
 
 // TEST Rocket
-	class bso_arty_ammo_122_r_test: bso_arty_ammo_122_r_he
+	class beo_arty_ammo_122_r_test: beo_arty_ammo_122_r_he
 	{
-		model = "\bso_rokit\data\quassimRocketHEtri.p3d";
+		model = "\beo_rokit\data\quassimRocketHEtri.p3d";
 	};
-	class bso_arty_ammo_122_r_fly_test: bso_arty_ammo_122_r_fly
+	class beo_arty_ammo_122_r_fly_test: beo_arty_ammo_122_r_fly
 	{	
-		model = "\bso_rokit\data\quassimRocketHEtri.p3d";
+		model = "\beo_rokit\data\quassimRocketHEtri.p3d";
 	};
 
 // DUD configs
 	// dud that detonates in air
-	class bso_sub_dud_fly: bso_arty_ammo_122_r_fly
+	class beo_sub_dud_fly: beo_arty_ammo_122_r_fly
 	{	
 		submunitionAmmo[] = {
-			"bso_sub_dud_air",0.5,
-			"bso_sub_dud_deploy",0.5};
+			"beo_sub_dud_air",0.5,
+			"beo_sub_dud_deploy",0.5};
 		submunitionConeType[] = {"poissondisc",1};
 		triggerDistance = 100;
 		triggerSpeedCoef[] = {0.5, 1};
 		submunitionConeAngle = 19;
 	};
 
-	class bso_sub_dud_air: bso_arty_ammo_122_r_fly
+	class beo_sub_dud_air: beo_arty_ammo_122_r_fly
 	{	
 		submunitionAmmo[] = {};
 		submunitionConeType[] = {"poissondisc",0};
@@ -674,16 +674,16 @@ class cfgAmmo
 
 	// dud that deployes UXO
 	class Mo_cluster_AP_UXO1_deployMine;
-	class bso_sub_dud_deploy: Mo_cluster_AP_UXO1_deployMine
+	class beo_sub_dud_deploy: Mo_cluster_AP_UXO1_deployMine
 	{
 		hit = 10;//35
 		indirectHit = 4;//25
 		indirectHitRange = 5;//8
-		submunitionAmmo[] = {"bso_sub_dud_uxo",1};
+		submunitionAmmo[] = {"beo_sub_dud_uxo",1};
 
 	};
 	class Mo_cluster_AP_UXO1_Ammo_F;
-	class bso_sub_dud_uxo: Mo_cluster_AP_UXO1_Ammo_F
+	class beo_sub_dud_uxo: Mo_cluster_AP_UXO1_Ammo_F
 	{
 		hit = 35;
 		indirectHit = 25;
@@ -700,17 +700,17 @@ class cfgAmmo
 
 
 // Cluster Rockets
-	class bso_arty_ammo_122_r_cluster: bso_arty_ammo_122_r_he
+	class beo_arty_ammo_122_r_cluster: beo_arty_ammo_122_r_he
 	{
 		submunitionAmmo[] = {
-			"bso_arty_ammo_122_r_cluster_fly",0.8,
-			"bso_sub_dud_fly",0.2
+			"beo_arty_ammo_122_r_cluster_fly",0.8,
+			"beo_sub_dud_fly",0.2
 		};
 	};	
-	class bso_arty_ammo_122_r_cluster_fly: bso_arty_ammo_122_r_fly
+	class beo_arty_ammo_122_r_cluster_fly: beo_arty_ammo_122_r_fly
 	{	
 		submunitionAmmo[] = {
-			"bso_sub_cluster_AP",0.6,
+			"beo_sub_cluster_AP",0.6,
 			"Mo_cluster_AP_UXO_deploy",0.4};
 		submunitionConeType[] = {"poissondisc",10};
 		triggerDistance = 100;
@@ -718,7 +718,7 @@ class cfgAmmo
 		submunitionConeAngle = 19;
 	};
 	class Mo_cluster_AP;
-	class bso_sub_cluster_AP: Mo_cluster_AP
+	class beo_sub_cluster_AP: Mo_cluster_AP
 	{
 		hit = 7;//35
 		indirectHit = 4;//25
