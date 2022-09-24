@@ -33,7 +33,7 @@ class CfgPatches
 			
 			};
 		weapons[] = {};
-		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Mark","A3_Weapons_F_Exp","beo_wps","beo_ai"};
+		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Mark","A3_Weapons_F_Exp","beo_wps","beo_ai","uk3cb_factions_vehicles_hilux"};
 		version = "1.0";
 		requiredVersion = "1.0";
 		author = "Walker";
@@ -387,50 +387,72 @@ class CfgWeapons
 		{
 			displayName = "Close";
 			minrangeprobab = 1;
-			minrange = 150;
+			minrange = 350;
 			midrangeprobab = 1;
-			midrange = 300;
+			midrange = 675;
 			maxrangeprobab = 1;
-			maxrange = 950;
-			artilleryDispersion = 8;
-			aiDispersionCoefX = 1.4;
-			aiDispersionCoefY = 1.5;
+			maxrange = 1000;
+			artilleryDispersion = 5;
+			//aiDispersionCoefX = 1.4;
+			//aiDispersionCoefY = 1.5;
 			reloadTime = 30;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
+			//artilleryCharge = 0.25;
+			artilleryCharge = 0.25;
 		};
 		class Medium: Medium
 		{
-			artilleryDispersion = 10;
-			aiDispersionCoefX = 1.5;
-			aiDispersionCoefY = 1.5;
+			artilleryDispersion = 5;
+			//aiDispersionCoefX = 1.5;
+			//aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.2;
-			minrange = 300;
+			minrange = 1000;
 			midrangeprobab = 0.2;
-			midrange = 1500;
+			midrange = 1230;
 			maxrangeprobab = 0.2;
-			maxrange = 3400;
+			maxrange = 1460;
 			reloadTime = 30;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
+			artilleryCharge = 0.30;
 		};
 		class Far: Far
 		{
-			artilleryDispersion = 12;
-			aiDispersionCoefX = 1.5;
-			aiDispersionCoefY = 1.5;
+			artilleryDispersion = 5;
+			//aiDispersionCoefX = 1.5;
+			//aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.1;
-			minrange = 500;
+			minrange = 1460;
 			midrangeprobab = 0.1;
-			midrange = 3000;
+			midrange = 2030;
 			maxrangeprobab = 0.1;
-			maxrange = 6500;
+			maxrange = 2600;
 			reloadTime = 30;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
+			artilleryCharge = 0.40;
+		};
+		class VeryFar: Far
+		{
+			displayName = "Very Far";
+			artilleryDispersion = 5;
+			//aiDispersionCoefX = 1.5;
+			//aiDispersionCoefY = 1.5;
+			minrangeprobab = 0.1;
+			minrange = 2600;
+			midrangeprobab = 0.1;
+			midrange = 3325;
+			maxrangeprobab = 0.1;
+			maxrange = 4050;
+			reloadTime = 30;
+			showToPlayer = 1;
+			burst = 1;
+			aiBurstTerminable = 0;
+			artilleryCharge = 0.50;
 		};
 		class TooClose: Close
 		{
@@ -441,10 +463,10 @@ class CfgWeapons
 			midrangeprobab = 1;
 			midrange = 200;
 			maxrangeprobab = 1;
-			maxrange = 350;
+			maxrange = 360;
 			artilleryDispersion = 5;
-			aiDispersionCoefX = 1.5;
-			aiDispersionCoefY = 1.5;
+			//aiDispersionCoefX = 1.5;
+			//aiDispersionCoefY = 1.5;
 			reloadTime = 30;
 			showToPlayer = 1;
 			burst = 1;
@@ -454,7 +476,8 @@ class CfgWeapons
 			"TooClose",
 			"Close",
 			"Medium",
-			"Far"
+			"Far",
+			"VeryFar"
 		};
 		magazines[] = {
 			"beo_arty_mag12_122_TEST",
@@ -470,11 +493,11 @@ class CfgWeapons
 		{
 			displayName = "Close";
 			minrangeprobab = 1;
-			minrange = 150;
+			minrange = 350;
 			midrangeprobab = 1;
-			midrange = 300;
+			midrange = 675;
 			maxrangeprobab = 1;
-			maxrange = 950;
+			maxrange = 1000;
 			artilleryDispersion = 5;
 			aiDispersionCoefX = 1.5;
 			aiDispersionCoefY = 1.5;
@@ -483,6 +506,7 @@ class CfgWeapons
 			burst = 10;
 			aiBurstTerminable = 0;
 			magazineReloadTime = 60;
+			artilleryCharge = 0.25;
 		};
 		class Medium: Medium
 		{
@@ -490,16 +514,17 @@ class CfgWeapons
 			aiDispersionCoefX = 1.5;
 			aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.2;
-			minrange = 300;
+			minrange = 1000;
 			midrangeprobab = 0.2;
-			midrange = 1500;
+			midrange = 1230;
 			maxrangeprobab = 0.2;
-			maxrange = 3400;
+			maxrange = 1460;
 			reloadTime = 0.2;
 			showToPlayer = 1;
 			burst = 10;
 			aiBurstTerminable = 0;
 			magazineReloadTime = 60;
+			artilleryCharge = 0.30;
 		};
 		class Far: Far
 		{
@@ -507,16 +532,36 @@ class CfgWeapons
 			aiDispersionCoefX = 1.5;
 			aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.1;
-			minrange = 500;
+			minrange = 1460;
 			midrangeprobab = 0.1;
-			midrange = 3000;
+			midrange = 2030;
 			maxrangeprobab = 0.1;
-			maxrange = 6500;
+			maxrange = 2600;
 			reloadTime = 0.2;
 			showToPlayer = 1;
 			burst = 10;
 			aiBurstTerminable = 0;
 			magazineReloadTime = 60;
+			artilleryCharge = 0.40;
+		};
+		class VeryFar: Far
+		{
+			displayName = "Very Far";
+			artilleryDispersion = 5;
+			aiDispersionCoefX = 1.5;
+			aiDispersionCoefY = 1.5;
+			minrangeprobab = 0.1;
+			minrange = 2600;
+			midrangeprobab = 0.1;
+			midrange = 3325;
+			maxrangeprobab = 0.1;
+			maxrange = 4050;
+			reloadTime = 0.2;
+			showToPlayer = 1;
+			burst = 10;
+			aiBurstTerminable = 0;
+			magazineReloadTime = 60;
+			artilleryCharge = 0.50;
 		};
 		class TooClose: Close
 		{
@@ -527,7 +572,7 @@ class CfgWeapons
 			midrangeprobab = 1;
 			midrange = 200;
 			maxrangeprobab = 1;
-			maxrange = 350;
+			maxrange = 360;
 			artilleryDispersion = 5;
 			aiDispersionCoefX = 1.5;
 			aiDispersionCoefY = 1.5;
@@ -540,7 +585,8 @@ class CfgWeapons
 			"TooClose",
 			"Close",
 			"Medium",
-			"Far"
+			"Far",
+			"VeryFar"
 		};
 		magazines[] = {
 			"beo_arty_mag10_122_he",
@@ -615,8 +661,8 @@ class cfgAmmo
 		explosive = 0.8;	//1 	
 		//submunitionAmmo = "beo_arty_ammo_122_r_fly";
 		submunitionAmmo[] = {
-			"beo_arty_ammo_122_r_fly",0.8,
-			"beo_sub_dud_fly",0.2
+			"beo_arty_ammo_122_r_fly",0.9,
+			"beo_sub_dud_fly",0.1
 			
 			};
 		effectsMissile = "beo_artyRocket_black";
@@ -703,8 +749,8 @@ class cfgAmmo
 	class beo_arty_ammo_122_r_cluster: beo_arty_ammo_122_r_he
 	{
 		submunitionAmmo[] = {
-			"beo_arty_ammo_122_r_cluster_fly",0.8,
-			"beo_sub_dud_fly",0.2
+			"beo_arty_ammo_122_r_cluster_fly",0.9,
+			"beo_sub_dud_fly",0.1
 		};
 	};	
 	class beo_arty_ammo_122_r_cluster_fly: beo_arty_ammo_122_r_fly
