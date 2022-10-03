@@ -421,7 +421,7 @@ class CfgWeapons
 		};
 		class Far: Far
 		{
-			artilleryDispersion = 5;
+			artilleryDispersion = 10;
 			//aiDispersionCoefX = 1.5;
 			//aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.1;
@@ -439,7 +439,7 @@ class CfgWeapons
 		class VeryFar: Far
 		{
 			displayName = "Very Far";
-			artilleryDispersion = 5;
+			artilleryDispersion = 15;
 			//aiDispersionCoefX = 1.5;
 			//aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.1;
@@ -528,7 +528,7 @@ class CfgWeapons
 		};
 		class Far: Far
 		{
-			artilleryDispersion = 5;
+			artilleryDispersion = 10;
 			aiDispersionCoefX = 1.5;
 			aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.1;
@@ -547,7 +547,7 @@ class CfgWeapons
 		class VeryFar: Far
 		{
 			displayName = "Very Far";
-			artilleryDispersion = 5;
+			artilleryDispersion = 15;
 			aiDispersionCoefX = 1.5;
 			aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.1;
@@ -578,7 +578,7 @@ class CfgWeapons
 			aiDispersionCoefY = 1.5;
 			reloadTime = 30;
 			showToPlayer = 1;
-			burst = 1;
+			burst = 10;
 			aiBurstTerminable = 0;
 		};
 		modes[] = {
