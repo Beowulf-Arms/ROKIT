@@ -1,10 +1,4 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 4.01
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-////////////////////////////////////////////////////////////////////
-
 #define _ARMA_
-
 //Class beo_arty : config.bin{
 class CfgPatches
 {
@@ -19,27 +13,15 @@ class CfgPatches
 			"beo_arty_rokit_he_ind",
 			"beo_arty_rokit_cluster",
 			"beo_arty_rokit_cluster_opf",
-			"beo_arty_rokit_cluster_ind",
-			"beo_arty_hilux_arty",
-			"beo_arty_hilux_arty_opf",
-			"beo_arty_hilux_arty_ind",
-			"beo_arty_hilux_arty_he",
-			"beo_arty_hilux_arty_he_opf",
-			"beo_arty_hilux_arty_he_ind",
-			"beo_arty_hilux_arty_cluster",
-			"beo_arty_hilux_arty_cluster_opf",
-			"beo_arty_hilux_arty_cluster_ind"
-			
-			
+			"beo_arty_rokit_cluster_ind"
 			};
 		weapons[] = {};
-		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Mark","A3_Weapons_F_Exp","beo_wps","beo_ai","uk3cb_factions_vehicles_hilux"};
-		version = "1.0";
-		requiredVersion = "1.0";
+		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Mark","A3_Weapons_F_Exp"};
+		version = "1";
+		requiredVersion = "1";
 		author = "Walker";
 	};
 };
-
 
 
 class beo_artyRocket_black
@@ -63,6 +45,8 @@ class beo_artyRocket_black
 		lifeTime = 120;
 	};
 };
+
+
 class cfgCloudlets
 {
 	class Missile5;
@@ -73,15 +57,10 @@ class cfgCloudlets
 	};
 };
 
+
 class CfgVehicles
 {
 	class StaticMortar;
-	
-// A3 Mk6	
-//	class Mortar_01_base_F: StaticMortar
-//	{
-//		class Turrets;
-//	};
 	class Mortar_01_base_F;
 	class B_Mortar_01_F: Mortar_01_base_F
 	{
@@ -94,13 +73,9 @@ class CfgVehicles
 	{
 		scope = 2;		
 		displayname = "[BEO AI] ROKIT Artillery";
-		editorSubcategory = "rhs_EdSubcat_artillery";
-		vehicleClass = "rhs_vehclass_artillery";
 		author = "Walker";
 		side = 1;
-		faction = "beo_ai_blu";
-		crew = "beo_ai_crew";
-		typicalCargo[] = {"beo_ai_crew"};
+		hiddenSelectionsTextures[] = {"\beo_rokit\data\rokit_mk6.paa"};
 		class Turrets: Turrets 
 		{		
 			class MainTurret: MainTurret
@@ -115,40 +90,17 @@ class CfgVehicles
 	{
 		scope = 2;
 		side = 0;
-		faction = "beo_ai_opf";
-		crew = "beo_ai_crew_opf";
-		typicalCargo[] = {"beo_ai_crew_opf"};
+		faction = "OPF_F";
+		crew = "O_Soldier_F";
 	};
 	
 	class beo_arty_rokit_ind: beo_arty_rokit
 	{
 		scope = 2;
 		side = 2;
-		faction = "beo_ai_ind";
-		crew = "beo_ai_crew_ind";
-		typicalCargo[] = {"beo_ai_crew_ind"};
+		faction = "IND_F";
+		crew = "I_soldier_F";
 	};
-
-
-	class beo_arty_rokit_test: beo_arty_rokit
-	{
-		displayname = "[BEO AI] ROKIT Artillery TEST";
-		model = "\beo_rokit\data\quassimLaunchertri.p3d";
-		
-		class Turrets: Turrets 
-		{		
-			class MainTurret: MainTurret
-			{
-				magazines[] = {"beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST"};
-				weapons[] = {"beo_arty_rokit"};
-			};
-		};	
-	};
-
-
-
-
-
 
 
 	class beo_arty_rokit_he: beo_arty_rokit
@@ -169,20 +121,17 @@ class CfgVehicles
 	{
 		scope = 2;
 		side = 0;
-		faction = "beo_ai_opf";
-		crew = "beo_ai_crew_opf";
-		typicalCargo[] = {"beo_ai_crew_opf"};
+		faction = "OPF_F";
+		crew = "O_Soldier_F";
 	};
 	
 	class beo_arty_rokit_he_ind: beo_arty_rokit_he
 	{
 		scope = 2;
 		side = 2;
-		faction = "beo_ai_ind";
-		crew = "beo_ai_crew_ind";
-		typicalCargo[] = {"beo_ai_crew_ind"};
+		faction = "IND_F";
+		crew = "I_soldier_F";
 	};
-
 
 	class beo_arty_rokit_cluster: beo_arty_rokit_he
 	{
@@ -202,164 +151,17 @@ class CfgVehicles
 	{
 		scope = 2;
 		side = 0;
-		faction = "beo_ai_opf";
-		crew = "beo_ai_crew_opf";
-		typicalCargo[] = {"beo_ai_crew_opf"};
+		faction = "OPF_F";
+		crew = "O_Soldier_F";
 	};
 	
 	class beo_arty_rokit_cluster_ind: beo_arty_rokit_cluster
 	{
 		scope = 2;
 		side = 2;
-		faction = "beo_ai_ind";
-		crew = "beo_ai_crew_ind";
-		typicalCargo[] = {"beo_ai_crew_ind"};
+		faction = "IND_F";
+		crew = "I_soldier_F";
 	};
-
-
-
-
-
-
-
-
-
-
-
-
-	class UK3CB_I_G_Hilux_Rocket_Arty;
-	class UK3CB_TKM_I_Hilux_Rocket_Arty: UK3CB_I_G_Hilux_Rocket_Arty
-	{
-		class Turrets;
-		class MainTurret;			
-	};
-	class beo_arty_hilux_arty: UK3CB_TKM_I_Hilux_Rocket_Arty
-	{	
-		scope = 2;
-		side = 1;
-		vehicleClass = "rhs_vehclass_artillery";
-		editorSubcategory = "rhs_EdSubcat_artillery";
-		faction="beo_ai_blu";
-		crew = "beo_ai_crew";
-		typicalCargo[] = {"beo_ai_crew"};
-		displayName = "[BEO AI] Hilux ROKIT MLRS";
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				elevationMode= 3; //how to elevate
-				weapons[] = {"beo_arty_rokit_mlrs"};
-				magazines[] = {"beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster"};
-			};
-		};	
-	};
-	
-	
-	class beo_arty_hilux_arty_opf: beo_arty_hilux_arty
-	{
-		scope = 2;
-		side = 0;
-		faction = "beo_ai_opf";
-		crew = "beo_ai_crew_opf";
-		typicalCargo[] = {"beo_ai_crew_opf"};
-	};
-	
-	class beo_arty_hilux_arty_ind: beo_arty_hilux_arty
-	{
-		scope = 2;
-		side = 2;
-		faction = "beo_ai_ind";
-		crew = "beo_ai_crew_ind";
-		typicalCargo[] = {"beo_ai_crew_ind"};
-	};
-
-
-
-
-	class beo_arty_hilux_arty_he: UK3CB_TKM_I_Hilux_Rocket_Arty
-	{	
-		scope = 2;
-		side = 1;
-		vehicleClass = "rhs_vehclass_artillery";
-		editorSubcategory = "rhs_EdSubcat_artillery";
-		faction="beo_ai_blu";
-		crew = "beo_ai_crew";
-		typicalCargo[] = {"beo_ai_crew"};
-		displayName = "[BEO AI] Hilux ROKIT MLRS (HE)";
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				elevationMode= 3; //how to elevate
-				weapons[] = {"beo_arty_rokit_mlrs"};
-				magazines[] = {"beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he"};
-			};
-		};	
-	};
-	
-	
-	class beo_arty_hilux_arty_he_opf: beo_arty_hilux_arty_he
-	{
-		scope = 2;
-		side = 0;
-		faction = "beo_ai_opf";
-		crew = "beo_ai_crew_opf";
-		typicalCargo[] = {"beo_ai_crew_opf"};
-	};
-	
-	class beo_arty_hilux_arty_he_ind: beo_arty_hilux_arty_he
-	{
-		scope = 2;
-		side = 2;
-		faction = "beo_ai_ind";
-		crew = "beo_ai_crew_ind";
-		typicalCargo[] = {"beo_ai_crew_ind"};
-	};
-
-
-
-
-
-	class beo_arty_hilux_arty_cluster: UK3CB_TKM_I_Hilux_Rocket_Arty
-	{	
-		scope = 2;
-		side = 1;
-		vehicleClass = "rhs_vehclass_artillery";
-		editorSubcategory = "rhs_EdSubcat_artillery";
-		faction="beo_ai_blu";
-		crew = "beo_ai_crew";
-		typicalCargo[] = {"beo_ai_crew"};
-		displayName = "[BEO AI] Hilux ROKIT MLRS (Cluster)";
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				elevationMode= 3; //how to elevate
-				weapons[] = {"beo_arty_rokit_mlrs"};
-				magazines[] = {"beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster","beo_arty_mag10_122_cluster"};
-			};
-		};	
-	};
-	
-	
-	class beo_arty_hilux_arty_cluster_opf: beo_arty_hilux_arty_cluster
-	{
-		scope = 2;
-		side = 0;
-		faction = "beo_ai_opf";
-		crew = "beo_ai_crew_opf";
-		typicalCargo[] = {"beo_ai_crew_opf"};
-	};
-	
-	class beo_arty_hilux_arty_cluster_ind: beo_arty_hilux_arty_cluster
-	{
-		scope = 2;
-		side = 2;
-		faction = "beo_ai_ind";
-		crew = "beo_ai_crew_ind";
-		typicalCargo[] = {"beo_ai_crew_ind"};
-	};
-	
 	
 };
 
@@ -480,7 +282,6 @@ class CfgWeapons
 			"VeryFar"
 		};
 		magazines[] = {
-			"beo_arty_mag12_122_TEST",
 			"beo_arty_mag12_122_he",
 			"beo_arty_mag12_122_cluster"
 		};
@@ -608,14 +409,6 @@ class cfgMagazines
 		count = 12;
 		initSpeed = 400;//850
 	};	
-
-	class beo_arty_mag12_122_test: beo_arty_mag12_122_he
-	{
-		scope = 2;
-		ammo = "beo_arty_ammo_122_r_test";
-		displayName = "[BEO AI] 12x 122mm TEST Rocket";
-	};
-	
 	class beo_arty_mag10_122_he: beo_arty_mag12_122_he
 	{
 		scope = 2;
@@ -681,17 +474,6 @@ class cfgAmmo
 		effectFly = "beo_artyRocket_black";
 		model = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
 		
-	};
-
-
-// TEST Rocket
-	class beo_arty_ammo_122_r_test: beo_arty_ammo_122_r_he
-	{
-		model = "\beo_rokit\data\quassimRocketHEtri.p3d";
-	};
-	class beo_arty_ammo_122_r_fly_test: beo_arty_ammo_122_r_fly
-	{	
-		model = "\beo_rokit\data\quassimRocketHEtri.p3d";
 	};
 
 // DUD configs
@@ -770,10 +552,5 @@ class cfgAmmo
 		indirectHit = 4;//25
 		indirectHitRange = 5;//8
 	};
-
-
-
-
-
 
 };

@@ -1,7 +1,0 @@
-﻿///<'bso_rokit.pbo' properties via Mikero's dos tools, dll version 7.16>///
-prefix=bso_rokit
-Mikero=DePbo.dll.7.16
-version=Sun Jan 30 13:47:29 2022
-//Pbo Type is: Arma Addon
-//Sha: '36E775AF02D92B152E61AF2E2CD1998A895A0F41'
-//////</properties>//////
