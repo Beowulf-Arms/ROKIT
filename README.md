@@ -1,5 +1,5 @@
 # ROKIT
-The Beowulf ROKIT System is a project to provide mission makers with an option for a OpFor AI artillery system that doesn't wreak havoc on players. 
+The Beowulf ROKIT System is a project to provide mission makers with an option for a OpFor AI artillery system that doesn't wreak havoc on players, but still provides a challenge.
 
 -	Dramatic, scary, and dangerous AI artillery support option designed to enhance mission experience
 -	No additional mods required
