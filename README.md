@@ -7,6 +7,9 @@ The Beowulf ROKIT System is a project to provide mission makers with an option f
 -	Now available with HE or Cluster munitions!
 -	Optional config for 3CB MLRS technical (ten tubes are better then one!)
 
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDkzNTY2ZDVhMTFhNmIwNDIzMDM3YjMwNzE4NGU2OTQyOGRlNTk5ZiZjdD1n/AADctIXKpydt6TrjwU/giphy.gif)
+
+
 # ROKIT Media
 https://cdn.medal.tv/ugcc/content-social/XDtOJev8Dx1xUyrSh_0R1A.mp4?auth=exp=1678156200~data=MTc0MzUwODMzLFlsWVRBeXRsNFdENHkscW9NZUVkeFVJ~hmac=12742caedf88b18dfa39c800f44f3c9d7fbb49e9c8445828592a783461009636
 
