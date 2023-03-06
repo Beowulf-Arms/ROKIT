@@ -7,6 +7,13 @@ The Beowulf ROKIT System is a project to provide mission makers with an option f
 -	Now available with HE or Cluster munitions!
 -	Optional config for 3CB MLRS technical (ten tubes are better then one!)
 
+# ROKIT Media
+https://cdn.medal.tv/ugcc/content-social/XDtOJev8Dx1xUyrSh_0R1A.mp4?auth=exp=1678156200~data=MTc0MzUwODMzLFlsWVRBeXRsNFdENHkscW9NZUVkeFVJ~hmac=12742caedf88b18dfa39c800f44f3c9d7fbb49e9c8445828592a783461009636
+
+https://cdn.medal.tv/ugcc/content-social/2zWu0rLjLvFnrPGSaHrWZw.mp4?auth=exp=1678156200~data=MTc0MzUwODMzLFlkcGRWeWhLTExRZzQscW9NZUVkeFVJ~hmac=dbd94feefff90be184b102c243657b715919f3add1034d901197704f77174255
+
+https://cdn.medal.tv/ugcc/content-social/f9XsTahFgnPkG52XtKgxIA.mp4?auth=exp=1678156200~data=ODk0OTM4OTgsVVllZXBUUU1fMXdMLSxxb01lRWR4VUk~hmac=81bd0ad6632c7103f68c4020649307fb426c4c5723136074d47470d77a777729
+
 # What is ROKIT?
 Built from the ground up to be used with AI mods such as LAMBs DANGER. The ROKIT system fires custom rockets with a deadly but not devastating payload. With a dramatic smoke trail, a chance for early detonations and scatterings of unexploded ordinance. You’ll find this provides an interesting challenge for the players without risking the entire mission to a well-placed mortar bomb and lack of spacing!
 
