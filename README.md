@@ -44,20 +44,20 @@ Built from the ground up to be used with AI mods such as LAMBs DANGER. The ROKIT
 
 # beo_rokit Classnames
 
-## Vehicles
+## cfgVehicles
 ```
 beo_arty_rokit
 beo_arty_rokit_opf
 beo_arty_rokit_ind
 ```
 
-## Weapons (For vehicles only)
+## cfgWeapons (For vehicles only)
 ```
 beo_arty_rokit
 beo_arty_rokit_mlrs
 ```
 
-## Magazines
+## cfgMagazines
 ```
 beo_arty_mag12_122_he
 beo_arty_mag12_122_cluster
@@ -65,7 +65,7 @@ beo_arty_mag10_122_he
 beo_arty_mag10_122_cluster
 ```
 
-## Ammo
+## cfgAmmo
 ```
 beo_arty_ammo_122_r_he
 beo_arty_ammo_122_r_cluster
