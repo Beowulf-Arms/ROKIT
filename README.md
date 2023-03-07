@@ -5,6 +5,7 @@ The Beowulf ROKIT System is a project to provide mission makers with an option f
 -	No additional mods required
 -	Just place the ROKIT launcher (currently just a Mk6 Mortar model), and register the artillery in LAMBS DANGER
 -	Now available with HE or Cluster munitions!
+- ROKIT's have a chance of detonating early before reaching their target mid-air, or fail to detonate on impact creating UXO!
 -	Optional config for 3CB MLRS technical (ten tubes are better then one!)
 
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDkzNTY2ZDVhMTFhNmIwNDIzMDM3YjMwNzE4NGU2OTQyOGRlNTk5ZiZjdD1n/AADctIXKpydt6TrjwU/giphy.gif)
