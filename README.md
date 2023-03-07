@@ -40,23 +40,30 @@ Built from the ground up to be used with AI mods such as LAMBs DANGER. The ROKIT
 [Imgur album](https://imgur.com/a/oFLcw62)
 
 # beo_rokit Classnames
+
+##Vehicles
 ```
-Vehicles
 beo_arty_rokit
 beo_arty_rokit_opf
 beo_arty_rokit_ind
+```
 
-Weapons (For vehicles only)
+##Weapons (For vehicles only)
+```
 beo_arty_rokit
 beo_arty_rokit_mlrs
+```
 
-Magazines
+##Magazines
+```
 beo_arty_mag12_122_he
 beo_arty_mag12_122_cluster
 beo_arty_mag10_122_he
 beo_arty_mag10_122_cluster
+```
 
-Ammo
+##Ammo
+```
 beo_arty_ammo_122_r_he
 beo_arty_ammo_122_r_cluster
 ```
