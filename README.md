@@ -49,7 +49,7 @@ The Beowulf Arms is a community of players who have come together to share their
 Our vision is that of a classic British community pub, but with a modern and global-reaching community twist. A central place for the community members to come together as friends in a safe environment to socialise and enjoy themselves.
 Whether your interests are solely in Arma,  or in many areas such as DCS and other flight sims, tabletop wargaming, D&D, or “the game of the week”.  We aim for The Beowulf Arms to be a warm and welcoming place to pull up a bar stool, and get involved!
 
-[](https://beowulf-arms.com/)
+[The Beowulf Arms Website](https://beowulf-arms.com/)
 
 
 # beo_rokit Classnames
