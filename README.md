@@ -42,6 +42,16 @@ Built from the ground up to be used with AI mods such as LAMBs DANGER. The ROKIT
 
 [Imgur album](https://imgur.com/a/oFLcw62)
 
+
+# Who are Beowulf?
+
+The Beowulf Arms is a community of players who have come together to share their interests in gaming and other hobbies. With the roots of the group formed around the Arma franchise, we've since adjusted to become a wider encompassing community. 
+Our vision is that of a classic British community pub, but with a modern and global-reaching community twist. A central place for the community members to come together as friends in a safe environment to socialise and enjoy themselves.
+Whether your interests are solely in Arma,  or in many areas such as DCS and other flight sims, tabletop wargaming, D&D, or “the game of the week”.  We aim for The Beowulf Arms to be a warm and welcoming place to pull up a bar stool, and get involved!
+
+[](https://beowulf-arms.com/)
+
+
 # beo_rokit Classnames
 
 ## cfgVehicles
