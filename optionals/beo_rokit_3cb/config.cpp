@@ -1,8 +1,7 @@
 #define _ARMA_
-//Class beo_arty : config.bin{
 class CfgPatches
 {
-	class beo_rokit
+	class beo_rokit_3cb
 	{
 		units[] = {
 			"beo_arty_hilux_arty",
@@ -39,9 +38,8 @@ class CfgVehicles
 		side = 1;
 		vehicleClass = "rhs_vehclass_artillery";
 		editorSubcategory = "rhs_EdSubcat_artillery";
-		faction="beo_ai_blu";
-		crew = "beo_ai_crew";
-		typicalCargo[] = {"beo_ai_crew"};
+		faction = "BLU_F";
+		crew = "B_Soldier_F";
 		displayName = "[BEO AI] Hilux ROKIT MLRS";
 		class Turrets: Turrets
 		{
@@ -58,64 +56,17 @@ class CfgVehicles
 	{
 		scope = 2;
 		side = 0;
-		faction = "beo_ai_opf";
-		crew = "beo_ai_crew_opf";
-		typicalCargo[] = {"beo_ai_crew_opf"};
+		faction = "OPF_F";
+		crew = "O_Soldier_F";
 	};
 	
 	class beo_arty_hilux_arty_ind: beo_arty_hilux_arty
 	{
 		scope = 2;
 		side = 2;
-		faction = "beo_ai_ind";
-		crew = "beo_ai_crew_ind";
-		typicalCargo[] = {"beo_ai_crew_ind"};
+		faction = "IND_F";
+		crew = "I_soldier_F";
 	};
-
-
-
-
-	class beo_arty_hilux_arty_he: UK3CB_TKM_I_Hilux_Rocket_Arty
-	{	
-		scope = 2;
-		side = 1;
-		vehicleClass = "rhs_vehclass_artillery";
-		editorSubcategory = "rhs_EdSubcat_artillery";
-		faction="beo_ai_blu";
-		crew = "beo_ai_crew";
-		typicalCargo[] = {"beo_ai_crew"};
-		displayName = "[BEO AI] Hilux ROKIT MLRS (HE)";
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				elevationMode= 3; //how to elevate
-				weapons[] = {"beo_arty_rokit_mlrs"};
-				magazines[] = {"beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he"};
-			};
-		};	
-	};
-	
-	class beo_arty_hilux_arty_he_opf: beo_arty_hilux_arty_he
-	{
-		scope = 2;
-		side = 0;
-		faction = "beo_ai_opf";
-		crew = "beo_ai_crew_opf";
-		typicalCargo[] = {"beo_ai_crew_opf"};
-	};
-	
-	class beo_arty_hilux_arty_he_ind: beo_arty_hilux_arty_he
-	{
-		scope = 2;
-		side = 2;
-		faction = "beo_ai_ind";
-		crew = "beo_ai_crew_ind";
-		typicalCargo[] = {"beo_ai_crew_ind"};
-	};
-
-
-
 
 
 	class beo_arty_hilux_arty_cluster: UK3CB_TKM_I_Hilux_Rocket_Arty
@@ -124,9 +75,8 @@ class CfgVehicles
 		side = 1;
 		vehicleClass = "rhs_vehclass_artillery";
 		editorSubcategory = "rhs_EdSubcat_artillery";
-		faction="beo_ai_blu";
-		crew = "beo_ai_crew";
-		typicalCargo[] = {"beo_ai_crew"};
+		faction = "BLU_F";
+		crew = "B_Soldier_F";
 		displayName = "[BEO AI] Hilux ROKIT MLRS (Cluster)";
 		class Turrets: Turrets
 		{
@@ -144,18 +94,16 @@ class CfgVehicles
 	{
 		scope = 2;
 		side = 0;
-		faction = "beo_ai_opf";
-		crew = "beo_ai_crew_opf";
-		typicalCargo[] = {"beo_ai_crew_opf"};
+		faction = "OPF_F";
+		crew = "O_Soldier_F";
 	};
 	
 	class beo_arty_hilux_arty_cluster_ind: beo_arty_hilux_arty_cluster
 	{
 		scope = 2;
 		side = 2;
-		faction = "beo_ai_ind";
-		crew = "beo_ai_crew_ind";
-		typicalCargo[] = {"beo_ai_crew_ind"};
+		faction = "IND_F";
+		crew = "I_soldier_F";
 	};
 	
 	

@@ -1,5 +1,4 @@
 #define _ARMA_
-//Class beo_arty : config.bin{
 class CfgPatches
 {
 	class beo_rokit
@@ -8,9 +7,6 @@ class CfgPatches
 			"beo_arty_rokit",
 			"beo_arty_rokit_opf",
 			"beo_arty_rokit_ind",
-			"beo_arty_rokit_he",
-			"beo_arty_rokit_he_opf",
-			"beo_arty_rokit_he_ind",
 			"beo_arty_rokit_cluster",
 			"beo_arty_rokit_cluster_opf",
 			"beo_arty_rokit_cluster_ind"
@@ -80,10 +76,23 @@ class CfgVehicles
 		{		
 			class MainTurret: MainTurret
 			{
-				magazines[] = {"beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster"};
+				magazines[] = {"beo_arty_mag_122_he","beo_arty_mag_122_he","beo_arty_mag_122_he","beo_arty_mag_122_he","beo_arty_mag_122_he","beo_arty_mag_122_he","beo_arty_mag_122_he","beo_arty_mag_122_he","beo_arty_mag_122_he","beo_arty_mag_122_he","beo_arty_mag_122_he","beo_arty_mag_122_he"};
 				weapons[] = {"beo_arty_rokit"};
 			};
 		};	
+
+		class assembleInfo
+		{
+			primary=0;
+			base="";
+			assembleTo="";
+			dissasembleTo[]=
+			{
+				"beo_rokit_bag",
+				"beo_rokit_bipod_bag"
+			};
+			displayName="";
+		};		
 	};	
 	
 	class beo_arty_rokit_opf: beo_arty_rokit
@@ -103,37 +112,7 @@ class CfgVehicles
 	};
 
 
-	class beo_arty_rokit_he: beo_arty_rokit
-	{
-		scope = 2;		
-		displayname = "[BEO AI] ROKIT Artillery (HE)";
-		class Turrets: Turrets 
-		{		
-			class MainTurret: MainTurret
-			{
-				magazines[] = {"beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he","beo_arty_mag12_122_he"};
-				weapons[] = {"beo_arty_rokit"};
-			};
-		};	
-	};	
-	
-	class beo_arty_rokit_he_opf: beo_arty_rokit_he
-	{
-		scope = 2;
-		side = 0;
-		faction = "OPF_F";
-		crew = "O_Soldier_F";
-	};
-	
-	class beo_arty_rokit_he_ind: beo_arty_rokit_he
-	{
-		scope = 2;
-		side = 2;
-		faction = "IND_F";
-		crew = "I_soldier_F";
-	};
-
-	class beo_arty_rokit_cluster: beo_arty_rokit_he
+	class beo_arty_rokit_cluster: beo_arty_rokit
 	{
 		scope = 2;		
 		displayname = "[BEO AI] ROKIT Artillery (Cluster)";
@@ -141,9 +120,22 @@ class CfgVehicles
 		{		
 			class MainTurret: MainTurret
 			{
-				magazines[] = {"beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster","beo_arty_mag12_122_cluster"};
+				magazines[] = {"beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster"};
 				weapons[] = {"beo_arty_rokit"};
 			};
+		};	
+
+		class assembleInfo
+		{
+			primary=0;
+			base="";
+			assembleTo="";
+			dissasembleTo[]=
+			{
+				"beo_rokit_cluster_bag",
+				"beo_rokit_bipod_bag"
+			};
+			displayName="";
 		};	
 	};	
 	
@@ -162,7 +154,135 @@ class CfgVehicles
 		faction = "IND_F";
 		crew = "I_soldier_F";
 	};
+
+
+
+	class beo_arty_rokit_mlrs: B_Mortar_01_F
+	{
+		scope = 2;		
+		displayname = "[BEO AI] ROKIT MLRS";
+		author = "Walker";
+		side = 1;
+		hiddenSelectionsTextures[] = {"\beo_rokit\data\rokit_mk6.paa"};
+		class Turrets: Turrets 
+		{		
+			class MainTurret: MainTurret
+			{
+				magazines[] = {"beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he"};
+				weapons[] = {"beo_arty_rokit_mlrs"};
+			};
+		};	
+
+		class assembleInfo
+		{
+			primary=0;
+			base="";
+			assembleTo="";
+			dissasembleTo[]=
+			{
+				"beo_rokit_mlrs_bag",
+				"beo_rokit_bipod_bag"
+			};
+			displayName="";
+		};		
+	};	
 	
+	class beo_arty_rokit_mlrs_opf: beo_arty_rokit_mlrs
+	{
+		scope = 2;
+		side = 0;
+		faction = "OPF_F";
+		crew = "O_Soldier_F";
+	};
+	
+	class beo_arty_rokit_mlrs_ind: beo_arty_rokit_mlrs
+	{
+		scope = 2;
+		side = 2;
+		faction = "IND_F";
+		crew = "I_soldier_F";
+	};
+	
+
+	// ROKIT Backpacks
+
+	class B_Mortar_01_weapon_F;
+	class I_Mortar_01_weapon_F: B_Mortar_01_weapon_F
+	{
+		class assembleInfo;
+	};
+	class B_Mortar_01_support_F;
+	class I_Mortar_01_support_F: B_Mortar_01_support_F
+	{
+		class assembleInfo;
+	};	
+
+	class beo_rokit_bag: I_Mortar_01_weapon_F
+	{
+        scope = 2;
+		author = "Walker";
+		displayName = "ROKIT Launcher Bag";
+		mass = 150;
+		class assembleInfo: assembleInfo
+		{
+			displayName = "ROKIT Launcher";
+			assembleTo = "beo_arty_rokit";
+			base[] = {"beo_rokit_bipod_bag"};
+		};
+		faction = "BLU_F";
+		editorSubcategory = "EdSubcat_DismantledWeapons";
+	};
+
+	class beo_rokit_cluster_bag: I_Mortar_01_weapon_F
+	{
+        scope = 2;
+		author = "Walker";
+		displayName = "ROKIT Launcher (Cluster) Bag";
+		mass = 150;
+		class assembleInfo: assembleInfo
+		{
+			displayName = "ROKIT (Cluster) Launcher";
+			assembleTo = "beo_arty_rokit_cluster";
+			base[] = {"beo_rokit_bipod_bag"};
+		};
+		faction = "BLU_F";
+		editorSubcategory = "EdSubcat_DismantledWeapons";
+	};
+
+	class beo_rokit_mlrs_bag: I_Mortar_01_weapon_F
+	{
+        scope = 2;
+		author = "Walker";
+		displayName = "ROKIT MLRS Bag";
+		mass = 150;
+		class assembleInfo: assembleInfo
+		{
+			displayName = "ROKIT MLRS";
+			assembleTo = "beo_arty_rokit_mlrs";
+			base[] = {"beo_rokit_bipod_bag"};
+		};
+		faction = "BLU_F";
+		editorSubcategory = "EdSubcat_DismantledWeapons";
+	};
+
+	class beo_rokit_bipod_bag: I_Mortar_01_support_F
+	{
+		scope = 2;
+		mass = 120;
+		author = "Walker";
+		displayName = "ROKIT Bipod Bag";
+		faction = "BLU_F";
+		class assembleInfo: assembleInfo
+		{
+			primary = 0;
+			base = "";
+			assembleTo = "";
+			dissasembleTo[] = {};
+			displayName = "";
+		};
+	};
+
+
 };
 
 class Mode_SemiAuto;
@@ -185,6 +305,7 @@ class CfgWeapons
 	
 	class beo_arty_rokit: rockets_230mm_GAT
 	{
+		displayName="ROKIT Launcher";
 		class Close: Close
 		{
 			displayName = "Close";
@@ -195,27 +316,22 @@ class CfgWeapons
 			maxrangeprobab = 1;
 			maxrange = 1000;
 			artilleryDispersion = 5;
-			//aiDispersionCoefX = 1.4;
-			//aiDispersionCoefY = 1.5;
-			reloadTime = 30;
+			reloadTime = 10;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
-			//artilleryCharge = 0.25;
 			artilleryCharge = 0.25;
 		};
 		class Medium: Medium
 		{
 			artilleryDispersion = 5;
-			//aiDispersionCoefX = 1.5;
-			//aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.2;
 			minrange = 1000;
 			midrangeprobab = 0.2;
 			midrange = 1230;
 			maxrangeprobab = 0.2;
 			maxrange = 1460;
-			reloadTime = 30;
+			reloadTime = 10;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
@@ -224,15 +340,13 @@ class CfgWeapons
 		class Far: Far
 		{
 			artilleryDispersion = 10;
-			//aiDispersionCoefX = 1.5;
-			//aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.1;
 			minrange = 1460;
 			midrangeprobab = 0.1;
 			midrange = 2030;
 			maxrangeprobab = 0.1;
 			maxrange = 2600;
-			reloadTime = 30;
+			reloadTime = 10;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
@@ -242,15 +356,13 @@ class CfgWeapons
 		{
 			displayName = "Very Far";
 			artilleryDispersion = 15;
-			//aiDispersionCoefX = 1.5;
-			//aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.1;
 			minrange = 2600;
 			midrangeprobab = 0.1;
 			midrange = 3325;
 			maxrangeprobab = 0.1;
 			maxrange = 4050;
-			reloadTime = 30;
+			reloadTime = 10;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
@@ -267,9 +379,7 @@ class CfgWeapons
 			maxrangeprobab = 1;
 			maxrange = 360;
 			artilleryDispersion = 5;
-			//aiDispersionCoefX = 1.5;
-			//aiDispersionCoefY = 1.5;
-			reloadTime = 30;
+			reloadTime = 10;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
@@ -282,8 +392,8 @@ class CfgWeapons
 			"VeryFar"
 		};
 		magazines[] = {
-			"beo_arty_mag12_122_he",
-			"beo_arty_mag12_122_cluster"
+			"beo_arty_mag_122_he",
+			"beo_arty_mag_122_cluster"
 		};
 	};
 	
@@ -401,36 +511,44 @@ class cfgMagazines
 {
 
 	class 12Rnd_230mm_rockets;
-	class beo_arty_mag12_122_he: 12Rnd_230mm_rockets
+	class beo_arty_mag_122_he: 12Rnd_230mm_rockets
 	{
 		scope = 2;
 		ammo = "beo_arty_ammo_122_r_he";
-		displayName = "[BEO AI] 12x 122mm HE Rocket";
-		count = 12;
-		initSpeed = 400;//850
+		displayName = "[BEO AI] 122mm HE ROKIT";
+		displayNameShort="122mm HE ROKIT";
+		count = 1;
+		initSpeed = 400;
+		picture="\A3\Weapons_F\launchers\RPG32\data\UI\gear_rpg32_rocket_ca.paa";
 	};	
-	class beo_arty_mag10_122_he: beo_arty_mag12_122_he
+	class beo_arty_mag10_122_he: beo_arty_mag_122_he
 	{
 		scope = 2;
 		displayName = "[BEO AI] 10x 122mm HE Rocket";
+		displayNameShort="122mm HE ROKIT";
 		count = 10;		
+		picture="\A3\Weapons_F\launchers\RPG32\data\UI\gear_rpg32_rocket_ca.paa";
 	};	
 
 	
-	class beo_arty_mag12_122_cluster: 12Rnd_230mm_rockets
+	class beo_arty_mag_122_cluster: 12Rnd_230mm_rockets
 	{
 		scope = 2;
 		ammo = "beo_arty_ammo_122_r_cluster";
-		displayName = "[BEO AI] 12x 122mm Cluster Rocket";
-		count = 12;
-		initSpeed = 400;//850
+		displayName = "[BEO AI] 122mm Cluster ROKIT";
+		displayNameShort="122mm Cluster ROKIT";
+		count = 1;
+		initSpeed = 400;
+		picture="\A3\Weapons_F\launchers\RPG32\data\UI\gear_rpg32_rocket_ca.paa";
 	};	
 	
-	class beo_arty_mag10_122_cluster: beo_arty_mag12_122_cluster
+	class beo_arty_mag10_122_cluster: beo_arty_mag_122_cluster
 	{
 		scope = 2;
 		displayName = "[BEO AI] 10x 122mm Cluster Rocket";
+		displayNameShort="122mm Cluster ROKIT";
 		count = 10;		
+		picture="\A3\Weapons_F\launchers\RPG32\data\UI\gear_rpg32_rocket_ca.paa";
 	};	
 	
 };
@@ -450,9 +568,8 @@ class cfgAmmo
 		aiAmmoUsageFlags = "64+ 128+ 512";
 		hit = 50;
 		indirectHit = 5;
-		indirectHitRange = 15;	
-		explosive = 0.8;	//1 	
-		//submunitionAmmo = "beo_arty_ammo_122_r_fly";
+		indirectHitRange = 20;	
+		explosive = 0.8;	
 		submunitionAmmo[] = {
 			"beo_arty_ammo_122_r_fly",0.9,
 			"beo_sub_dud_fly",0.1
@@ -468,7 +585,7 @@ class cfgAmmo
 		scope = 2;
 		hit = 50; //1200
 		indirectHit = 5; //800
-		indirectHitRange = 15;	//30
+		indirectHitRange = 20;	//30
 		dangerRadiusHit = 30;
 		effectsMissile = "beo_artyRocket_black";
 		effectFly = "beo_artyRocket_black";
@@ -504,9 +621,9 @@ class cfgAmmo
 	class Mo_cluster_AP_UXO1_deployMine;
 	class beo_sub_dud_deploy: Mo_cluster_AP_UXO1_deployMine
 	{
-		hit = 10;//35
-		indirectHit = 4;//25
-		indirectHitRange = 5;//8
+		hit = 10;
+		indirectHit = 4;
+		indirectHitRange = 5;
 		submunitionAmmo[] = {"beo_sub_dud_uxo",1};
 
 	};
@@ -516,11 +633,9 @@ class cfgAmmo
 		hit = 35;
 		indirectHit = 25;
 		indirectHitRange = 8;
-		//model = "\A3\Weapons_F_Orange\Explosives\BombCluster_01_UXO1_F";
 		model = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
 		explosionEffects = "MK82_Explode";
 		CraterEffects = "MK82_Smoke";
-		SoundSetExplosion[] = {"jsrs_bomb_explosion_soundset","jsrs_rocket_explosion_stereo_soundset","jsrs_shell_explosion_reverb_soundset"};
 	};
 
 
