@@ -53,7 +53,7 @@ class CfgMagazines
         scope = 2;
 		scopeCurator=2;
 		ace_arsenal_hide=-1;
-		displayname="[CSW] 10x 122mm Cluster ROKIT";
+		displayname="[CSW] 10x 122mm HE ROKIT";
         type = 256;  // Must be 256 to show up in Arsenal
         count = 1;
         //model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";

@@ -40,7 +40,7 @@ class CfgVehicles
 		editorSubcategory = "rhs_EdSubcat_artillery";
 		faction = "BLU_F";
 		crew = "B_Soldier_F";
-		displayName = "[BEO AI] Hilux ROKIT MLRS";
+		displayName = "Hilux ROKIT MLRS";
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -77,7 +77,7 @@ class CfgVehicles
 		editorSubcategory = "rhs_EdSubcat_artillery";
 		faction = "BLU_F";
 		crew = "B_Soldier_F";
-		displayName = "[BEO AI] Hilux ROKIT MLRS (Cluster)";
+		displayName = "Hilux ROKIT MLRS (Cluster)";
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret

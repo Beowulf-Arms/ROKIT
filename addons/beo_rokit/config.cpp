@@ -68,7 +68,7 @@ class CfgVehicles
 	class beo_arty_rokit: B_Mortar_01_F
 	{
 		scope = 2;		
-		displayname = "[BEO AI] ROKIT Artillery";
+		displayname = "ROKIT Artillery";
 		author = "Walker";
 		side = 1;
 		hiddenSelectionsTextures[] = {"\beo_rokit\data\rokit_mk6.paa"};
@@ -115,7 +115,7 @@ class CfgVehicles
 	class beo_arty_rokit_cluster: beo_arty_rokit
 	{
 		scope = 2;		
-		displayname = "[BEO AI] ROKIT Artillery (Cluster)";
+		displayname = "ROKIT Artillery (Cluster)";
 		class Turrets: Turrets 
 		{		
 			class MainTurret: MainTurret
@@ -160,7 +160,7 @@ class CfgVehicles
 	class beo_arty_rokit_mlrs: B_Mortar_01_F
 	{
 		scope = 2;		
-		displayname = "[BEO AI] ROKIT MLRS";
+		displayname = "ROKIT MLRS";
 		author = "Walker";
 		side = 1;
 		hiddenSelectionsTextures[] = {"\beo_rokit\data\rokit_mk6.paa"};
@@ -455,7 +455,7 @@ class CfgWeapons
 			magazineReloadTime = 60;
 			artilleryCharge = 0.40;
 		};
-		class VeryFar: Far
+		class VeryFar: VeryFar
 		{
 			displayName = "Very Far";
 			artilleryDispersion = 15;
@@ -474,7 +474,7 @@ class CfgWeapons
 			magazineReloadTime = 60;
 			artilleryCharge = 0.50;
 		};
-		class TooClose: Close
+		class TooClose: TooClose
 		{
 			displayName = "Too Close";
 			artilleryCharge = 0.15;
@@ -487,10 +487,11 @@ class CfgWeapons
 			artilleryDispersion = 5;
 			aiDispersionCoefX = 1.5;
 			aiDispersionCoefY = 1.5;
-			reloadTime = 30;
+			reloadTime = 0.2;
 			showToPlayer = 1;
 			burst = 10;
 			aiBurstTerminable = 0;
+			magazineReloadTime = 60;
 		};
 		modes[] = {
 			"TooClose",
@@ -515,7 +516,7 @@ class cfgMagazines
 	{
 		scope = 2;
 		ammo = "beo_arty_ammo_122_r_he";
-		displayName = "[BEO AI] 122mm HE ROKIT";
+		displayName = "122mm HE ROKIT";
 		displayNameShort="122mm HE ROKIT";
 		count = 1;
 		initSpeed = 400;
@@ -524,7 +525,7 @@ class cfgMagazines
 	class beo_arty_mag10_122_he: beo_arty_mag_122_he
 	{
 		scope = 2;
-		displayName = "[BEO AI] 10x 122mm HE Rocket";
+		displayName = "10x 122mm HE ROKIT";
 		displayNameShort="122mm HE ROKIT";
 		count = 10;		
 		picture="\A3\Weapons_F\launchers\RPG32\data\UI\gear_rpg32_rocket_ca.paa";
@@ -535,7 +536,7 @@ class cfgMagazines
 	{
 		scope = 2;
 		ammo = "beo_arty_ammo_122_r_cluster";
-		displayName = "[BEO AI] 122mm Cluster ROKIT";
+		displayName = "122mm Cluster ROKIT";
 		displayNameShort="122mm Cluster ROKIT";
 		count = 1;
 		initSpeed = 400;
@@ -545,7 +546,7 @@ class cfgMagazines
 	class beo_arty_mag10_122_cluster: beo_arty_mag_122_cluster
 	{
 		scope = 2;
-		displayName = "[BEO AI] 10x 122mm Cluster Rocket";
+		displayName = "10x 122mm Cluster ROKIT";
 		displayNameShort="122mm Cluster ROKIT";
 		count = 10;		
 		picture="\A3\Weapons_F\launchers\RPG32\data\UI\gear_rpg32_rocket_ca.paa";
@@ -634,8 +635,8 @@ class cfgAmmo
 		indirectHit = 25;
 		indirectHitRange = 8;
 		model = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
-		explosionEffects = "MK82_Explode";
-		CraterEffects = "MK82_Smoke";
+		explosionEffects = "BombExplosion";
+		CraterEffects = "BombCrater";
 	};
 
 
