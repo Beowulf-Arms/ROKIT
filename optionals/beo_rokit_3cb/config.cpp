@@ -7,9 +7,6 @@ class CfgPatches
 			"beo_arty_hilux_arty",
 			"beo_arty_hilux_arty_opf",
 			"beo_arty_hilux_arty_ind",
-			"beo_arty_hilux_arty_he",
-			"beo_arty_hilux_arty_he_opf",
-			"beo_arty_hilux_arty_he_ind",
 			"beo_arty_hilux_arty_cluster",
 			"beo_arty_hilux_arty_cluster_opf",
 			"beo_arty_hilux_arty_cluster_ind"
