@@ -106,8 +106,10 @@ beo_arty_mag10_122_cluster
 beo_arty_ammo_122_r_he
 beo_arty_ammo_122_r_cluster
 
+```
 
 ## ACE CSW
+```
 beo_arty_rokit_carry
 beo_arty_rokit_mlrs_carry
 (Both use ace_csw_mortarBaseplate)
@@ -116,8 +118,10 @@ beo_arty_mag_122_he_csw_mag
 beo_arty_mag_122_cluster_csw_mag
 beo_arty_mag10_122_csw_mag
 beo_arty_mag10_122_cluster_csw_mag
+```
 
 ## 3CB Factions - Hilux (ROKIT MLRS)
+```
 beo_arty_hilux_arty
 beo_arty_hilux_arty_opf
 beo_arty_hilux_arty_ind
